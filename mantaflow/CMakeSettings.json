@@ -1,0 +1,52 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "NUMPY",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "TBB",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "OPENVDB",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "OPENVDB_BLOSC",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "OPENMP",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "TBB_INSTALL_DIR",
+          "value": "C:/Users/rouss/Projects/oneTBB/out/install/x64-Release",
+          "type": "PATH"
+        },
+        {
+          "name": "TBB_INCLUDE_DIR",
+          "value": "C:/Users/rouss/Projects/oneTBB/out/install/x64-Release/include",
+          "type": "PATH"
+        }
+      ]
+    }
+  ]
+}

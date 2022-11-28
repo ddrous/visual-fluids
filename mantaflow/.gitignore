@@ -1,0 +1,15 @@
+*.sublime-project
+*.sublime-workspace
+*.uni
+*.raw
+*.npz
+*.pyc
+*.bin
+waveletNoiseTile.bin
+waveletNoiseTileDouble.bin
+build
+doc
+tensorflow/mantaGen/datasets
+out/*
+.vs/*
+openvdb/*
