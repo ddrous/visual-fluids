@@ -59,7 +59,7 @@
 if (WIN32)
     # has em64t/vc8 em64t/vc9
     # has ia32/vc7.1 ia32/vc8 ia32/vc9
-    set(_TBB_DEFAULT_INSTALL_DIR "C:/Program Files/Intel/TBB")
+    set(_TBB_DEFAULT_INSTALL_DIR "C:/Users/rouss/Projects/NeuralFluids/tbb/out/install/x64-Release")
     set(_TBB_LIB_NAME "tbb")
     set(_TBB_LIB_MALLOC_NAME "${_TBB_LIB_NAME}malloc")
     set(_TBB_LIB_DEBUG_NAME "${_TBB_LIB_NAME}_debug")
@@ -184,7 +184,7 @@ endmacro(TBB_CORRECT_LIB_DIR var_content)
 
 
 #-- Look for include directory and set ${TBB_INCLUDE_DIR}
-set (TBB_INC_SEARCH_DIR ${_TBB_INSTALL_DIR}/include)
+set (TBB_INC_SEARCH_DIR "${_TBB_INSTALL_DIR}/include")
 # Jiri: tbbvars now sets the CPATH environment variable to the directory
 #       containing the headers.
 find_path(TBB_INCLUDE_DIR
