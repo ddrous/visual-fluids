@@ -1,0 +1,13 @@
+## This is a yaml file for GPU-enabled Jax with prebuilt wheels on MacOS M1/M2
+## Run `conda env create -f jaxenv_osx.yaml`
+## NB: This applied to Manbaforge/Miniforge, not Miniconda/Anaconda as it has limited support for ARM chips
+name: jaxenv
+dependencies:
+  - numpy
+  - jax
+  - jaxlib
+  - flax
+  - optax
+  - matplotlib
+  - jupyter
+  - pip

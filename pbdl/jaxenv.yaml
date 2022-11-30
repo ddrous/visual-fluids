@@ -1,9 +1,0 @@
-name: jaxenv
-dependencies:
-  - numpy
-  - jax
-  - jaxlib
-  - flax
-  - optax
-  - matplotlib
-  - jupyter
