@@ -34,6 +34,9 @@ def get_batch_data(X, Y, batch_size):
 
 ## A function for the Pytorch dataloader that will return data as NumPy arrays
 def numpy_collate_fn(batch):
-    inputs, outputs = zip(*batch)
+    inputs, labels = zip(*batch)
     ## NB. Make sure each element if numpy tensor first
-    return np.stack(inputs), np.stack(outputs)
+    ## Make sure channel is moved from first axis to last, if not already
+    inputs = np.moveaxis(np.stack(inputs), 1, -1)
+    labels = np.moveaxis(np.stack(labels), 1, -1)
+    return inputs, labels
