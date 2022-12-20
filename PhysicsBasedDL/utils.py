@@ -9,15 +9,19 @@ import matplotlib.pyplot as plt
 plt.style.use('bmh')
 
 ## Wrapper function for matplotlib
-def plot(*args, ax=None, x_label=None, y_label=None, title=None, **kwargs):
+def plot(*args, ax=None, figsize=(6,4), x_label=None, y_label=None, title=None, y_scale='log', **kwargs):
     if ax==None: 
-        _, ax = plt.subplots(1, 1, figsize=(8,5))
+        if figsize==None:
+            _, ax = plt.subplots(1, 1, figsize=(8,5))
+        else:
+            _, ax = plt.subplots(1, 1, figsize=figsize)
     if x_label:
         ax.set_xlabel(x_label)
     if y_label:
         ax.set_ylabel(y_label)
     if title:
         ax.set_title(title)
+    ax.set_yscale(y_scale)
     ax.plot(*args, **kwargs)
     ax.legend(fontsize=12)
     return ax
