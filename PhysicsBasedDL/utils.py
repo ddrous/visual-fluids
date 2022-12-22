@@ -1,29 +1,27 @@
 import numpy as np
 
-# import seaborn as sns
-# sns.set(context='poster', style='white',
-#         font='sans-serif', font_scale=1, color_codes=True, None)
-# sns.despine()
-
 import matplotlib.pyplot as plt
-plt.style.use('bmh')
+# plt.style.use('bmh')
+
+import seaborn as sns
+sns.set(context='notebook', style='ticks',
+        font='sans-serif', font_scale=1, color_codes=True, rc={"lines.linewidth": 2})
 
 ## Wrapper function for matplotlib
-def plot(*args, ax=None, figsize=(6,4), x_label=None, y_label=None, title=None, y_scale='log', **kwargs):
+def plot(*args, ax=None, figsize=(6,3.5), x_label=None, y_label=None, title=None, y_scale='linear', **kwargs):
     if ax==None: 
-        if figsize==None:
-            _, ax = plt.subplots(1, 1, figsize=(8,5))
-        else:
-            _, ax = plt.subplots(1, 1, figsize=figsize)
+        _, ax = plt.subplots(1, 1, figsize=figsize)
+    # sns.despine(ax=ax)
     if x_label:
         ax.set_xlabel(x_label)
     if y_label:
         ax.set_ylabel(y_label)
     if title:
         ax.set_title(title)
-    ax.set_yscale(y_scale)
     ax.plot(*args, **kwargs)
-    ax.legend(fontsize=12)
+    ax.set_yscale(y_scale)
+    ax.legend()
+    plt.tight_layout()
     return ax
 
 ## Data generator
