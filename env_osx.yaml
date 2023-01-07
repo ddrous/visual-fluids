@@ -258,6 +258,8 @@ dependencies:
     - importlib-resources==5.10.0
     - jaxtyping==0.2.9
     - ml-collections==0.1.1
+    - mpi4jax==0.3.11.post1
+    - mpi4py==3.1.4
     - phiflow==2.2.5
     - promise==2.3
     - protobuf==3.20.3

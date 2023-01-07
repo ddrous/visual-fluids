@@ -48,7 +48,11 @@ Our overall goal is to convert `.NPZ` files into volumetric `.VDB` now supported
 
 
 ## Warnings when installing MPI4JAX in a Conda environment
-- Install `x86_64-linux-gnu` on Conda: `conda install -c anaconda gcc_linux-64`
-- Don't install `mpich-mpicc` with conda. If need be, uninstall it: `conda uninstall -c conda-forge mpich-mpicc`
-- Install MPI system-wide (e.g. on Ubuntu): `sudo apt install mpich`
-- Remember to set the `MPICC` path to the system's:  `env MPICC=/usr/bin/mpicc`
+- Make sure you have OpenMPI installed: on MAC, `brew install open-mpi`, or on Linux ...
+- If you prefer the MPICH implementation: 
+    - Don't install `mpich-mpicc` with Conda. If need be, uninstall it: `conda uninstall -c conda-forge mpich-mpicc`
+    - Install MPICH system-wide (e.g. on Ubuntu): `sudo apt install mpich`
+    - Remember to set the `MPICC` path to the system's:  `env MPICC=/usr/bin/mpicc`
+- On Linux WSL, install `x86_64-linux-gnu` on Conda: `conda install -c anaconda gcc_linux-64` (for some reason, MPI4JAX doesn't compile with the default)
+- On then, you install and test `mpi4jax`
+- A tip on using shared memory in MPI [here](https://stackoverflow.com/questions/39912588/can-i-use-mpi-with-shared-memory)
