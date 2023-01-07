@@ -45,3 +45,10 @@ Our overall goal is to convert `.NPZ` files into volumetric `.VDB` now supported
     NB: _It is advised to run the above command from the location of the `manta2vdb.py` script._
 
 6. Open Blender, press `Shift + A`, then `Volumes`, then `import OpenVDB` to load your volumetric scene files. To make awesome renderings, follow [Nils Thuerey's video](https://youtu.be/xI1ARz4ZSQU). That's all folks, ENJOY !
+
+
+## Warnings when installing MPI4JAX in a Conda environment
+- Install `x86_64-linux-gnu` on Conda: `conda install -c anaconda gcc_linux-64`
+- Don't install `mpich-mpicc` with conda. If need be, uninstall it: `conda uninstall -c conda-forge mpich-mpicc`
+- Install MPI system-wide (e.g. on Ubuntu): `sudo apt install mpich`
+- Remember to set the `MPICC` path to the system's:  `env MPICC=/usr/bin/mpicc`
