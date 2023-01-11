@@ -2,3 +2,4 @@ build/*
 Utils/__pycache__/*
 *.pyc
 .DS_Store
+!build/README.md

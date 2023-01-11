@@ -1,6 +1,6 @@
 # Neural Fluids
 
-A collection of repos from TUM to run fluid simulations and ML experiments then visualise results in Blender.
+A collection of repos from TUM to run fluid simulations and ML experiments in PhiFlow then visualise results in Blender.
 
 
 ## Getting started
@@ -10,7 +10,7 @@ Our overall goal is to convert `.NPZ` files into volumetric `.VDB` now supported
 1. Install `PhiFlow` and run experiments
     `
     pip install phiflow dash
-    `. This expriment was tasted with Phiflow < 2.2.5 (which is included in folder `PhiFlow`)
+    `. This experiment was tasted with Phiflow 2.2.5 (which is included in folder `PhiFlow`)
 
 2. Run a PhiFlow simulation. For example, run [`TUM.py`](./phiflow2blender/tutorial/TUM.py) using Python3. The results will be saved in `.NPZ` format.
 
@@ -45,3 +45,14 @@ Our overall goal is to convert `.NPZ` files into volumetric `.VDB` now supported
     NB: _It is advised to run the above command from the location of the `manta2vdb.py` script._
 
 6. Open Blender, press `Shift + A`, then `Volumes`, then `import OpenVDB` to load your volumetric scene files. To make awesome renderings, follow [Nils Thuerey's video](https://youtu.be/xI1ARz4ZSQU). That's all folks, ENJOY !
+
+
+
+## Dependencies
+
+The files you will encouter in this repository have been updated to work on my WSL setup. Here are the links to the original repositories: 
+- PhiFlow: https://github.com/tum-pbs/PhiFlow
+- Mantaflow: https://github.com/thunil/mantaflow
+- MantaFlow to Blender: https://github.com/intergalactic-mammoth/phiflow2blender
+- Blender (optional): https://www.blender.org
+That's it. Thanks to the original creators :)
