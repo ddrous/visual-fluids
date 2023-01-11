@@ -10,7 +10,7 @@ Our overall goal is to convert `.NPZ` files into volumetric `.VDB` now supported
 1. Install `PhiFlow` and run experiments
     `
     pip install phiflow dash
-    `
+    `. This expriment was tasted with Phiflow < 2.2.5 (which is included in folder `PhiFlow`)
 
 2. Run a PhiFlow simulation. For example, run [`TUM.py`](./phiflow2blender/tutorial/TUM.py) using Python3. The results will be saved in `.NPZ` format.
 
@@ -45,14 +45,3 @@ Our overall goal is to convert `.NPZ` files into volumetric `.VDB` now supported
     NB: _It is advised to run the above command from the location of the `manta2vdb.py` script._
 
 6. Open Blender, press `Shift + A`, then `Volumes`, then `import OpenVDB` to load your volumetric scene files. To make awesome renderings, follow [Nils Thuerey's video](https://youtu.be/xI1ARz4ZSQU). That's all folks, ENJOY !
-
-
-## Warnings when installing MPI4JAX in a Conda environment
-- Make sure you have OpenMPI installed: on MAC, `brew install open-mpi`, or on Linux ...
-- If you prefer the MPICH implementation: 
-    - Don't install `mpich-mpicc` with Conda. If need be, uninstall it: `conda uninstall -c conda-forge mpich-mpicc`
-    - Install MPICH system-wide (e.g. on Ubuntu): `sudo apt install mpich`
-    - Remember to set the `MPICC` path to the system's:  `env MPICC=/usr/bin/mpicc`
-- On Linux WSL, install `x86_64-linux-gnu` on Conda: `conda install -c anaconda gcc_linux-64` (for some reason, MPI4JAX doesn't compile with the default)
-- On then, you install and test `mpi4jax`
-- A tip on using shared memory in MPI [here](https://stackoverflow.com/questions/39912588/can-i-use-mpi-with-shared-memory)
