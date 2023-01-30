@@ -1,4 +1,4 @@
-# Neural Fluids
+# Visual Fluids - VFX
 
 A collection of repos from TUM to run fluid simulations and ML experiments in PhiFlow then visualise results in Blender.
 
